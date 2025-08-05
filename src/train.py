@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
+from metrics import DiceLoss
 from torchmetrics.classification import BinaryJaccardIndex
 
 import albumentations as A
@@ -140,7 +141,7 @@ def main():
     args = get_args()
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    base_dir = '/kaggle/input/retina-blood-vessel/Data'
+    base_dir = '/Users/maks2/OneDrive/projects/retina-segmentation/Data'
     train_dir = os.path.join(base_dir, 'train')
     test_dir = os.path.join(base_dir, 'test')
 
@@ -221,7 +222,7 @@ def main():
         raise ValueError("Model not supported")
 
     metric = BinaryJaccardIndex(threshold=0.5).to(device)
-    criterion = utils.DiceLoss()
+    criterion = DiceLoss()
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4, weight_decay=1e-5)
 
     train_model(model,
