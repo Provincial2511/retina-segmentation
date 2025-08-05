@@ -47,3 +47,11 @@
 git clone https://github.com/your_username/retina-segmentation-project.git
 cd retina-segmentation
 pip install -r requirements.txt
+```
+Запуск обучения
+```bash
+python src/train.py --model attention_unet --epochs 50 --batch_size 8
+```
+Чтобы использовать обученную модель, вы можете использовать веса лучшей модели (находятся по ссылке ниже)
+
+https://disk.yandex.ru/d/vwIbmIHR5tA-3Q
