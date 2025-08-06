@@ -22,7 +22,7 @@
 
 В ходе экспериментов было установлено, что Attention U-Net показывает прирост метрики IoU на 17% по сравнению с baseline U-Net.
 
-| Модель | Val Dice Score | Val IoU |
+| Модель | Val Dice Loss | Val IoU |
 | :--- | :---: | :---: |
 | ResAttU-Net | **0.67** | **0.20** |
 | ResU-Net | 0.66 | 0.21 |
