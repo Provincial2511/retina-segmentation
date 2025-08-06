@@ -44,7 +44,7 @@
 Рекомендуется использовать виртуальное окружение.
 
 ```bash
-git clone https://github.com/your_username/retina-segmentation-project.git
+git clone https://github.com/Provincial2511/retina-segmentation.git
 cd retina-segmentation
 pip install -r requirements.txt
 ```
